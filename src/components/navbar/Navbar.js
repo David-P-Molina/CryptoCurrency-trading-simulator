@@ -8,7 +8,7 @@ class Navbar extends Component {
             <nav className="NavbarItems">
                 <h1 className="app-name">MemeCoin Simulator</h1>
                 
-                <ul>
+                <ul className="nav-menu">
                     {MenuItems.map((item, index) => {
                         return (
                             <li key={index}>
