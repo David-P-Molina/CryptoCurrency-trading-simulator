@@ -20,14 +20,19 @@ const MenuItems = [
         cName: 'nav-links'
     }, 
     {
-        title: 'Sign-In/Login',
+        title: 'Login',
         url: '#',
-        cName: 'nav-links user-functions'
+        cName: 'nav-links user-functions not-logged-in'
     },     
     {
         title: 'Sign-Up',
         url: '#',
-        cName: 'nav-links user-functions'
+        cName: 'nav-links user-functions not-logged-in'
+    }, 
+    {
+        title: 'Logout',
+        url: '#',
+        cName: 'nav-links user-functions logged-in'
     }, 
 ]
 

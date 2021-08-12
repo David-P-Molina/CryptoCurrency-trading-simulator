@@ -37,3 +37,9 @@
 .user-functions {
     background-color: rgb(245, 249, 255);
 }
+.logged-in {
+    display: none;
+}
+.not-logged-in {
+    display: flex;
+}
