@@ -4,6 +4,14 @@ class WalletInput extends Component {
     state = {
         name: ''
     }
+    
+    handleOnSubmit = event => {
+        event.preventDefault()
+        this.props.(this.state.name) //Finish add wallet information
+        this.setState({
+            name: ''
+        })
+    }
 
     render() {
         return (
