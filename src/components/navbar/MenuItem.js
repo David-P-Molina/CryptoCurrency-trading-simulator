@@ -10,9 +10,9 @@ const MenuItems = [
         cName: 'nav-links'
     }, 
     {
-        title: 'Wallet',
+        title: ' My Wallet',
         url: '#',
-        cName: 'nav-links'
+        cName: 'nav-links logged-in'
     }, 
     {
         title: 'Learn More',
