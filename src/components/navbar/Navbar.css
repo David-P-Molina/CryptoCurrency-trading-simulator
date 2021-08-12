@@ -1,0 +1,13 @@
+.NavbarItems {
+    background: rgb(17, 59, 131);
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2 rem;
+}
+.app-name {
+    color: seashell;
+    justify-self: start;
+    margin-left: 20px;
+}
