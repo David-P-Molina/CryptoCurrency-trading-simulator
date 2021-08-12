@@ -22,12 +22,12 @@ const MenuItems = [
     {
         title: 'Sign-In/Login',
         url: '#',
-        cName: 'nav-links'
+        cName: 'nav-links user-functions'
     },     
     {
         title: 'Sign-Up',
         url: '#',
-        cName: 'nav-links'
+        cName: 'nav-links user-functions'
     }, 
 ]
 
