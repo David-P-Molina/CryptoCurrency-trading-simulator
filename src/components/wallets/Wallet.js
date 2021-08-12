@@ -9,3 +9,5 @@ export default class Wallet extends Component {
         )
     }
 }
+
+export default Wallet
