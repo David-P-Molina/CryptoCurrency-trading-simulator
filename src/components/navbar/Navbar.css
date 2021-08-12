@@ -23,3 +23,14 @@
     font-size: 2rem;
     color: steelblue;
 }
+
+.nav-links {
+    color: steelblue;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links:hover {
+    color: white;
+    background-color: rgb(68, 114, 184);
+}
