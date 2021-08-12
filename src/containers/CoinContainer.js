@@ -10,5 +10,12 @@ export class CoinContainer extends Component {
         )
     }
 }
+const mapStateToProps = (state) => ({
+    
+})
 
-export default CoinContainer
+const mapDispatchToProps = {
+    
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CoinContainer)

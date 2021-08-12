@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 export class UserContainer extends Component {
     render() {
@@ -9,5 +10,12 @@ export class UserContainer extends Component {
         )
     }
 }
+const mapStateToProps = (state) => ({
+    
+})
 
-export default UserContainer
+const mapDispatchToProps = {
+    
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(UserContainer)
