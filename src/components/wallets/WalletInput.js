@@ -3,9 +3,14 @@ import React, { Component } from 'react'
 class WalletInput extends Component {
     state = {
         name: '',
-        value: 10000
+        amount: 10000
     }
-
+    handleOnChange = event => {
+        this.setState({
+            name: event.target.value,
+            value: event.target.value
+        })
+    }
     handleOnSubmit = event => {
         event.preventDefault()
         this.props.(this.state.name) //Finish add wallet information
@@ -28,7 +33,7 @@ class WalletInput extends Component {
                     <label>Starting Amount</label>
                     <input
                         type="number"
-                        value={this.state.value}
+                        amount={this.state.amount}
                         onChange={this.handleOnChange}
                         />
                     <input type="submit" />
