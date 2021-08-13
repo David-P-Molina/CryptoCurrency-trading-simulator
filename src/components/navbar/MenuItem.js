@@ -1,37 +1,37 @@
 const MenuItems = [
     {
         title: 'Home',
-        url: '#',
+        url: '/',
         cName: 'nav-links'
     }, 
     {
         title: 'Coins',
-        url: '#',
+        url: '/coins',
         cName: 'nav-links'
     }, 
     {
         title: ' My Wallet',
-        url: '#',
+        url: '/wallet',
         cName: 'nav-links logged-in'
     }, 
     {
         title: 'Learn More',
-        url: '#',
+        url: '/learn-more',
         cName: 'nav-links'
     }, 
     {
         title: 'Login',
-        url: '#',
+        url: '/login',
         cName: 'nav-links user-functions not-logged-in'
     },     
     {
         title: 'Sign-Up',
-        url: '#',
+        url: '/signup',
         cName: 'nav-links user-functions not-logged-in'
     }, 
     {
         title: 'Logout',
-        url: '#',
+        url: '/logout',
         cName: 'nav-links user-functions logged-in'
     }, 
 ]
