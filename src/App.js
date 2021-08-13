@@ -9,7 +9,15 @@ import LearnMore from './components/LearnMore'
 // import { Signup, Login, Signout } from './components/users/Forms'
 
 class App extends React.Component {
-  
+  constructor(props) {
+    super(props)
+    this.state = {
+      error: null,
+      isLoaded: false,
+      isLoggedIn: false,
+      coins: []
+    }
+  }
   render() {
   return (
     <div className="App">
