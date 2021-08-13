@@ -10,27 +10,29 @@ function App() {
     <div className="App">
       <Router>
         <Navbar />
-        <Route path="/">
-          <Home />
-        </Route>
-        {/* <Route path="/coins">
-          <CoinContainer />
-        </Route>
-        <Route path="/my-wallet">
-          <WalletContainer />
-        </Route> */}
-        <Route path="/learn-more">
-          <LearnMore />
-        </Route>
-        {/* <Route path="/login">
-          <Login />
-        </Route>
-        <Route path="/logout">
-          <Logout />
-        </Route>
-        <Route path="/signup">
-          <Signup />
-        </Route> */}
+        <Switch>
+          <Route path="/">
+            <Home />
+          </Route>
+          {/* <Route path="/coins">
+            <CoinContainer />
+            </Route>
+            <Route path="/my-wallet">
+            <WalletContainer />
+          </Route> */}
+          <Route path="/learn-more">
+            <LearnMore />
+          </Route>
+          {/* <Route path="/login">
+            <Login />
+            </Route>
+            <Route path="/logout">
+            <Logout />
+            </Route>
+            <Route path="/signup">
+            <Signup />
+          </Route> */}
+        </Switch>
       </Router>
     </div>
   );
