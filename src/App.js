@@ -4,6 +4,9 @@ import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Home from './components/Home'
 import LearnMore from './components/LearnMore'
+// import Coins from './components/coin/Coins'
+// import Wallet from './components/wallet/Wallet'
+// import { Signup, Login, Signout } from './components/users/Forms'
 
 function App() {
   return (
