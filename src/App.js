@@ -6,7 +6,7 @@ import Home from './components/Home'
 import LearnMore from './components/LearnMore'
 // import Coins from './components/coin/Coins'
 // import Wallet from './components/wallet/Wallet'
-// import { Signup, Login, Signout } from './components/users/Forms'
+// import { Signup, Login, Signout } from './components/users/userInputs'
 
 class App extends React.Component {
   constructor(props) {
@@ -18,6 +18,11 @@ class App extends React.Component {
       coins: []
     }
   }
+
+    componentDidMount() {
+      fetch("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest")
+        .then(response => response.json())
+    }
   render() {
   return (
     <div className="App">
