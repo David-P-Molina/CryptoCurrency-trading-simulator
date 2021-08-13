@@ -1,4 +1,4 @@
-const userReducer = (state = [], action) => {
+export const userReducer = (state = [], action) => {
     switch(action.type) {
         case '':
             return []
@@ -6,4 +6,3 @@ const userReducer = (state = [], action) => {
             return state
     }
 }
-export userReducer

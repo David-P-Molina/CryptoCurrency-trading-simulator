@@ -1,4 +1,4 @@
-const walletReducer = (state = [], action) => {
+export const walletReducer = (state = [], action) => {
     switch(action.type) {
         case '':
             return []
@@ -6,4 +6,3 @@ const walletReducer = (state = [], action) => {
             return state
     }
 }
-export walletReducer
