@@ -8,7 +8,9 @@ import LearnMore from './components/LearnMore'
 // import Wallet from './components/wallet/Wallet'
 // import { Signup, Login, Signout } from './components/users/Forms'
 
-function App() {
+class App extends React.Component {
+  
+  render() {
   return (
     <div className="App">
       <Router>
@@ -38,7 +40,7 @@ function App() {
         </Switch>
       </Router>
     </div>
-  );
+  )};
 }
 
 export default App;
