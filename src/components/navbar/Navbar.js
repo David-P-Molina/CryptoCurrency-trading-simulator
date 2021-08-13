@@ -13,6 +13,7 @@ class Navbar extends Component {
                         return (
                             <NavLink
                                 to={item.url}
+                                key={index}
                                 className={item.cName}
                             >
                                     {item.title}
