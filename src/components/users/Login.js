@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
-export class Login extends Component {
+class Login extends Component {
     state = {
         username: "",
         password: "",
