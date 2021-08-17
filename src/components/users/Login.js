@@ -8,8 +8,12 @@ export class Login extends Component {
     }
     handleOnChange = (e) => {
         this.setState({
-            [this.target.name]: this.target.value
+            [e.target.name]: e.target.value
         })
+    }
+    handleOnSubmit = (e) => {
+        e.preventDefault()
+        
     }
     render() {
         return (
