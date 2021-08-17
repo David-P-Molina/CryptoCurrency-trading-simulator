@@ -5,6 +5,7 @@ class Signup extends Component {
         username: "",
         email: "",
         password: "",
+        confirmPassword: "",
     }
 
     handleOnChange = (e) => {
@@ -24,23 +25,23 @@ class Signup extends Component {
                     <h1>Sign Up to Create Your Wallet</h1>
                 <label>Username:</label>
                 <input 
-                    type="" 
-                    value={this.state.} 
+                    type="text" 
+                    value={this.state.username} 
                     onChange={this.handleOnChange} />
                 <label>Email:</label>
                 <input 
-                    type="" 
-                    value={this.state.} 
+                    type="text" 
+                    value={this.state.email} 
                     onChange={this.handleOnChange} />
                 <label>Password:</label>
                 <input 
-                    type="" 
-                    value={this.state.} 
+                    type="password" 
+                    value={this.state.password} 
                     onChange={this.handleOnChange} />
                 <label>Confirm Password:</label>
                 <input 
-                    type="" 
-                    value={this.state.} 
+                    type="password" 
+                    value={this.state.confirmPassword} 
                     onChange={this.handleOnChange} />
                 <input type="submit" value="signup" />
                 </form>
