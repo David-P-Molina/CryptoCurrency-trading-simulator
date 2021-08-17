@@ -2,6 +2,10 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 
 export class Login extends Component {
+    state = {
+        username: "",
+        password: "",
+    }
     render() {
         return (
             <div>
