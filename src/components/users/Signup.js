@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
 class Signup extends Component {
     state = {
@@ -57,4 +58,4 @@ class Signup extends Component {
         )
     }
 }
-export default Signup
+export default connect(mapStateToProps, mapDispatchToProps)(Signup)
