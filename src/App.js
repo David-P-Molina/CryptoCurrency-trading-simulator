@@ -6,7 +6,10 @@ import Home from './components/Home'
 import LearnMore from './components/LearnMore'
 // import Coins from './components/coin/Coins'
 // import Wallet from './components/wallet/Wallet'
-// import { Signup, Login, Signout } from './components/users/userInputs'
+import Signup from './components/users/Signup'
+import Login from './components/users/Login'
+import Logout from './components/users/Logout'
+
 
 class App extends React.Component {
   constructor(props) {
@@ -41,7 +44,7 @@ class App extends React.Component {
           <Route path="/learn-more">
             <LearnMore />
           </Route>
-          {/* <Route path="/login">
+          <Route path="/login">
             <Login />
             </Route>
             <Route path="/logout">
@@ -49,7 +52,7 @@ class App extends React.Component {
             </Route>
             <Route path="/signup">
             <Signup />
-          </Route> */}
+          </Route>
         </Switch>
       </Router>
     </div>
