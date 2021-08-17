@@ -28,6 +28,18 @@ export class Login extends Component {
                         value={this.state.username}
                         onChange={this.handleOnChange}
                     />
+                    <label htmlFor="password">Password:</label>
+                    <input 
+                        type="password"
+                        name="password"
+                        id="password"
+                        value={this.state.password}
+                        onChange={this.handleOnChange}
+                    />
+                    <input
+                        type="submit"
+                        value="Login"
+                    />
                 </form>
             </div>
         )
