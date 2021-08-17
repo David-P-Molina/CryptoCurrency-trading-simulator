@@ -6,6 +6,11 @@ export class Login extends Component {
         username: "",
         password: "",
     }
+    handleOnChange = (e) => {
+        this.setState({
+            [this.target.name]: this.target.value
+        })
+    }
     render() {
         return (
             <div>
