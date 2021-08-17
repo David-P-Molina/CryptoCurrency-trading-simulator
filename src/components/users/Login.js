@@ -13,12 +13,22 @@ export class Login extends Component {
     }
     handleOnSubmit = (e) => {
         e.preventDefault()
-        
+
     }
     render() {
         return (
             <div>
-                
+                <form onSubmit={this.handleOnSubmit}>
+                    <h1>Login</h1>
+                    <label htmlFor="username">Username:</label>
+                    <input 
+                        type="text"
+                        name="username"
+                        id="username"
+                        value={this.state.username}
+                        onChange={this.handleOnChange}
+                    />
+                </form>
             </div>
         )
     }
