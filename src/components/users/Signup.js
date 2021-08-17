@@ -20,7 +20,12 @@ class Signup extends Component {
     render() {
         return (
             <div>
-                
+                <form onChange={this.handleOnSubmit}>
+                <label>Username:</label>
+                <label>Email:</label>
+                <label>Password:</label>
+                <label>Confirm Password:</label>
+                </form>
             </div>
         )
     }
