@@ -26,21 +26,29 @@ class Signup extends Component {
                 <label>Username:</label>
                 <input 
                     type="text" 
+                    name="username"
+                    id="username"
                     value={this.state.username} 
                     onChange={this.handleOnChange} />
                 <label>Email:</label>
                 <input 
                     type="text" 
+                    name="email"
+                    id="email"
                     value={this.state.email} 
                     onChange={this.handleOnChange} />
                 <label>Password:</label>
                 <input 
                     type="password" 
+                    name="password"
+                    id="password"
                     value={this.state.password} 
                     onChange={this.handleOnChange} />
                 <label>Confirm Password:</label>
                 <input 
                     type="password" 
+                    name="password"
+                    id="password"
                     value={this.state.confirmPassword} 
                     onChange={this.handleOnChange} />
                 <input type="submit" value="signup" />
