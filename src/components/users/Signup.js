@@ -23,32 +23,32 @@ class Signup extends Component {
             <div>
                 <form onChange={this.handleOnSubmit}>
                     <h1>Sign Up to Create Your Wallet</h1>
-                <label>Username:</label>
+                <label htmlFor="username">Username:</label>
                 <input 
                     type="text" 
                     name="username"
                     id="username"
                     value={this.state.username} 
                     onChange={this.handleOnChange} />
-                <label>Email:</label>
+                <label htmlFor="email">Email:</label>
                 <input 
                     type="text" 
                     name="email"
                     id="email"
                     value={this.state.email} 
                     onChange={this.handleOnChange} />
-                <label>Password:</label>
+                <label htmlFor="password">Password:</label>
                 <input 
                     type="password" 
                     name="password"
                     id="password"
                     value={this.state.password} 
                     onChange={this.handleOnChange} />
-                <label>Confirm Password:</label>
+                <label htmlFor="confirm-password">Confirm Password:</label>
                 <input 
                     type="password" 
-                    name="password"
-                    id="password"
+                    name="confirm-password"
+                    id="confirm-password"
                     value={this.state.confirmPassword} 
                     onChange={this.handleOnChange} />
                 <input type="submit" value="signup" />
