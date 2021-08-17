@@ -6,6 +6,12 @@ class Signup extends Component {
         email: "",
         password: "",
     }
+
+    handleOnChange = (e) => {
+         this.setState({
+             [e.target.name]: e.target.value
+         })
+    }
     handleOnSubmit = (e) => {
         e.preventDefault()
         const { username, email, password } = this.state
