@@ -1,9 +1,10 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import MenuItems from './MenuItem'
 import { NavLink } from 'react-router-dom'
 import './Navbar.css'
 
-const Navbar =({ authChecked, LoggedIn, currentUser}) => {
+const Navbar = ({ authChecked, LoggedIn, currentUser }) => {
     return (
         <nav className="NavbarItems">
             <h1 className="app-name">MemeCoin Simulator</h1>
@@ -23,5 +24,7 @@ const Navbar =({ authChecked, LoggedIn, currentUser}) => {
         </nav>
      )
 }
-
-export default Navbar;
+const mapStateToProps = ({ auth: { authChecked, loggedIn, currentUser } }) => {
+    return { authChecked, loggedIn, currentUser }
+}
+export default connect(mapStateToProps)(Navbar)

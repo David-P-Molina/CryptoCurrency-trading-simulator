@@ -5,7 +5,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Home from './components/Home'
 import LearnMore from './components/LearnMore'
 // import Coins from './components/coin/Coins'
-// import Wallet from './components/wallet/Wallet'
+import Wallet from './components/wallets/Wallet'
 import Signup from './components/users/Signup'
 import Login from './components/users/Login'
 // import Logout from './components/users/Logout'
@@ -35,11 +35,11 @@ class App extends React.Component {
             <Home />
           </Route>
           {/* <Route path="/coins">
-            <CoinContainer />
-            </Route>
+            <Coin />
+            </Route> */}
             <Route path="/my-wallet">
-            <WalletContainer />
-          </Route> */}
+            <Wallet />
+          </Route>
           <Route path="/learn-more">
             <LearnMore />
           </Route>

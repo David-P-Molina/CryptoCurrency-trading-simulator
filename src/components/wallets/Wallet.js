@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-export default class Wallet extends Component {
+class Wallet extends Component {
     render() {
         return (
             <div>
-                
+                <h1>sdf</h1>
             </div>
         )
     }
 }
 
-export default Wallet
+export default connect()(Wallet)
