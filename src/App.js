@@ -9,6 +9,7 @@ import Wallet from './components/wallets/Wallet'
 import Signup from './components/users/Signup'
 import Login from './components/users/Login'
 // import Logout from './components/users/Logout'
+import withAuth from './components/auth/withAuth'
 
 
 class App extends React.Component {
@@ -37,9 +38,7 @@ class App extends React.Component {
           {/* <Route path="/coins">
             <Coin />
             </Route> */}
-            <Route path="/my-wallet">
-            <Wallet />
-          </Route>
+          <Route path="/my-wallet" component={withAuth(Wallet)} />
           <Route path="/learn-more">
             <LearnMore />
           </Route>
