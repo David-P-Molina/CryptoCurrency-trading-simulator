@@ -8,7 +8,7 @@ import LearnMore from './components/LearnMore'
 // import Wallet from './components/wallet/Wallet'
 import Signup from './components/users/Signup'
 import Login from './components/users/Login'
-import Logout from './components/users/Logout'
+// import Logout from './components/users/Logout'
 
 
 class App extends React.Component {
@@ -23,8 +23,7 @@ class App extends React.Component {
   }
 
     componentDidMount() {
-      fetch("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest")
-        .then(response => response.json())
+      
     }
   render() {
   return (
@@ -47,9 +46,9 @@ class App extends React.Component {
           <Route path="/login">
             <Login />
             </Route>
-            <Route path="/logout">
-            <Logout />
-            </Route>
+            {/* <Route path="/logout">
+              <Logout />
+            </Route> */}
             <Route path="/signup">
             <Signup />
           </Route>
