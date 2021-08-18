@@ -38,6 +38,7 @@ class Signup extends Component {
                     onChange={this.handleOnChange} 
                     value={this.state.username} 
                 />
+                <br />
                 <label htmlFor="email">Email:</label>
                 <input 
                     type="text" 
@@ -46,6 +47,7 @@ class Signup extends Component {
                     onChange={this.handleOnChange} 
                     value={this.state.email} 
                 />
+                <br />
                 <label htmlFor="password">Password:</label>
                 <input 
                     type="password" 
@@ -54,6 +56,7 @@ class Signup extends Component {
                     onChange={this.handleOnChange} 
                     value={this.state.password} 
                 />
+                <br />
                 <input type="submit" value="signup" />
                 </form>
             </div>

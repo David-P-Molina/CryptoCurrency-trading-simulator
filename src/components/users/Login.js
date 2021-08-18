@@ -16,7 +16,7 @@ class Login extends Component {
     handleOnSubmit = (e) => {
         e.preventDefault()
         const { username, password } = this.state
-        this.props.dispatchLoginUser({ email, password })
+        this.props.dispatchLoginUser({ username, password })
         .dispatchLoginUser(() => this.props.history.push("/"))
         .catch(() => this.setState({ error: true }))
     
@@ -35,6 +35,7 @@ class Login extends Component {
                         onChange={this.handleOnChange}
                         value={this.state.username}
                     />
+                    <br />
                     <label htmlFor="password">Password:</label>
                     <input 
                         type="password"
@@ -43,6 +44,7 @@ class Login extends Component {
                         onChange={this.handleOnChange}
                         value={this.state.password}
                     />
+                    <br />
                     <input
                         type="submit"
                         value="Login"

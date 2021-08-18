@@ -9,7 +9,7 @@ const getToken = () => {
     const now = new Date(Date.now()).getTime()
     const thirtyMinutes = 1000 * 60 * 30
     const timeSinceLastLogin = now - localStorage.getItem("lastLoginTime")
-    if (timesSinceLastLogin < thirtyMinutes) {
+    if (timeSinceLastLogin < thirtyMinutes) {
         return localStorage.getItem("token")
     }
 }
