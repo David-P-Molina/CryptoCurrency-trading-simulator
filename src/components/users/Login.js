@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { loginUser } from '../../actions/auth'
 
 class Login extends Component {
     state = {
         username: "",
         password: "",
+        error: false,
     }
     handleOnChange = (e) => {
         this.setState({
@@ -14,7 +16,7 @@ class Login extends Component {
     handleOnSubmit = (e) => {
         e.preventDefault()
         const { username, password } = this.state
-
+    
     }
     render() {
         return (
