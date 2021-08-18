@@ -9,4 +9,10 @@ const Logout = ({ dispatchLogoutUser }) => {
     const handleOnClick = () => {
         dispatchLogoutUser().then(() => history.push("/"))
     }
+
+    return (
+        <button className="btn" onClick={this.handleOnClick}>
+            Logout
+        </button>
+    )
 }
