@@ -5,4 +5,8 @@ import { useHistory } from 'react-router-dom'
 
 const Logout = ({ dispatchLogoutUser }) => {
     const history = useHistory()
+        
+    const handleOnClick = () => {
+        dispatchLogoutUser().then(() => history.push("/"))
+    }
 }
