@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import { signupUser } from '../../actions/auth'
 
 class Signup extends Component {
     state = {
@@ -7,6 +8,7 @@ class Signup extends Component {
         email: "",
         password: "",
         confirmPassword: "",
+        errors: {status: {message: ""}}
     }
 
     handleOnChange = (e) => {
@@ -17,6 +19,10 @@ class Signup extends Component {
     handleOnSubmit = (e) => {
         e.preventDefault()
         const { username, email, password } = this.state
+        this.props
+            .dispatchSignupUser({ username, email, password })
+            .dispatchSignupUser(() => this.props.history.push("/"))
+            .catch((errors) => this.setState({ errors }))
     }
 
     render() {
