@@ -7,7 +7,6 @@ class Signup extends Component {
         username: "",
         email: "",
         password: "",
-        confirmPassword: "",
         errors: {status: {message: ""}}
     }
 
