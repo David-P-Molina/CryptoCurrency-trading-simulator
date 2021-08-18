@@ -23,7 +23,18 @@ function withAuth(WrappedComponent) {
                 return <WrappedComponent {...this.props} />
             }
         }
+        const mapStateToProps = ({
+            auth: { authChecked, loggedIn, currentUser }
+        }) => {
+            return { authChecked, loggedIn, currentUser }
+        }
+        const mapDispatchToProps = (dispatch) => {
+            return {
+                dispatchCheckAuth: () => dispatch(checkAuth())
+            }
+        }
     }
+    return connect(mapStateToProps, mapDispatchToProps)(Wrapper)
 }
 
 export default withAuth
