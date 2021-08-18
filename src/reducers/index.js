@@ -3,7 +3,6 @@ import authReducer from './authReducer'
 import { walletReducer } from './walletReducer'
 
 export const rootReducer = combineReducers({
-    auth: (state, action) => 'testing',
-    user: userReducer,
+    auth: authReducer,
     wallet: walletReducer,
 })
