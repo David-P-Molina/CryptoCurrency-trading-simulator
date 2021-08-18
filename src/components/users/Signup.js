@@ -20,7 +20,7 @@ class Signup extends Component {
         const { username, email, password } = this.state
         this.props
             .dispatchSignupUser({ username, email, password })
-            .dispatchSignupUser(() => this.props.history.push("/"))
+            .then(() => this.props.history.push("/"))
             .catch((errors) => this.setState({ errors }))
     }
 
