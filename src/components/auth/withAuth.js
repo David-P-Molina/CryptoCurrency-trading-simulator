@@ -5,9 +5,23 @@ import Login from './users/Login'
 
 function withAuth(WrappedComponent) {
     class Wrapper extends React.Component {
-        
-        render() {
+        componentDidMount() {
+            this.props.dispatchCheckAuth()
+        }
 
+        render() {
+            if(!this.props.authChecked) {
+                return <LoadingSpinner />
+            } else if (!this.props.loggedIn) {
+                return (
+                    <div>
+                        <Login />
+                        <p className="errors">You need to login to view this page</p>
+                    </div>
+                )
+            } else {
+                return <WrappedComponent {...this.props} />
+            }
         }
     }
 }
