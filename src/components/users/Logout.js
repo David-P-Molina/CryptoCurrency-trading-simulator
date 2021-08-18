@@ -16,3 +16,9 @@ const Logout = ({ dispatchLogoutUser }) => {
         </button>
     )
 }
+const mapDispatchToProps = (dispatch) => {
+    return {
+        dispatchLogoutUser: () => dispatch(logoutUser())
+    }
+}
+export default connect(null, mapDispatchToProps)(Logout)
