@@ -61,8 +61,10 @@ class Signup extends Component {
     }
 }
 
-const mapDispatchToProps = () => {
-    
+const mapDispatchToProps = (dispatch) => {
+    return {
+        dispatchSignupUser: (credentials) => dispatch(signupUser(credentials))
+    }
 }
 
 export default connect(null, mapDispatchToProps)(Signup)
