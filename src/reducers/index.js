@@ -1,6 +1,6 @@
-import { userReducer } from './userReducer'
-import { walletReducer } from './walletReducer'
 import { combineReducers } from 'redux'
+import authReducer from './authReducer'
+import { walletReducer } from './walletReducer'
 
 export const rootReducer = combineReducers({
     auth: (state, action) => 'testing',
