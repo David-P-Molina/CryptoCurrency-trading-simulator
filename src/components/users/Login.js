@@ -16,6 +16,9 @@ class Login extends Component {
     handleOnSubmit = (e) => {
         e.preventDefault()
         const { username, password } = this.state
+        this.props.dispatchLoginUser({ email, password })
+        .dispatchLoginUser(() => this.props.history.push("/"))
+        .catch(() => this.setState({ error: true }))
     
     }
     render() {
