@@ -24,10 +24,11 @@ class Signup extends Component {
             .catch((errors) => this.setState({ errors }))
     }
 
+
     render() {
         return (
             <div>
-                <form onChange={this.handleOnSubmit}>
+                <form onSubmit={this.handleOnSubmit}>
                     <h1>Sign Up to Create Your Wallet</h1>
                     <p className="errors">{this.state.errors.status.message}</p>
                 <label htmlFor="username">Username:</label>
