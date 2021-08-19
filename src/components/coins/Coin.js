@@ -1,7 +1,6 @@
 import React from 'react'
 
 const Coin = ({name, symbol, initial_value, marketcap}) => {
-    // let { coin } = props
 
     return (
         <div>
