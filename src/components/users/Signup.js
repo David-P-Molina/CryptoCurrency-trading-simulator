@@ -30,7 +30,8 @@ class Signup extends Component {
             <div>
                 <form onSubmit={this.handleOnSubmit}>
                     <h1>Sign Up to Create Your Wallet</h1>
-                    {/* <p className="errors">{this.state.errors.status.message}</p> */}
+                    <br />
+                    <p className='h-8 text-red-400'>{this.state.errors.status.message}</p>
                 <label htmlFor="username">Username:</label>
                 <input 
                     type="text" 

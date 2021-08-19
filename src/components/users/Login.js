@@ -17,7 +17,7 @@ class Login extends Component {
         e.preventDefault()
         const { username, password } = this.state
         this.props.dispatchLoginUser({ username, password })
-        .dispatchLoginUser(() => this.props.history.push("/"))
+        .then(() => this.props.history.push("/"))
         .catch(() => this.setState({ error: true }))
     
     }
@@ -26,7 +26,7 @@ class Login extends Component {
             <div>
                 <form onSubmit={this.handleOnSubmit}>
                     <h1>Login</h1>
-                    <p className="errors"> {this.state.error && "Invalid email or password. Please try again."} </p>
+                    <p className="errors"> {this.state.error && "Invalid username or password. Please try again."} </p>
                     <label htmlFor="username">Username:</label>
                     <input 
                         type="text"
