@@ -6,5 +6,5 @@ import { coinReducer } from './coinReducer'
 export const rootReducer = combineReducers({
     auth: authReducer,
     wallet: walletReducer,
-    coin:  coinReducer,
+    coins:  coinReducer,
 })

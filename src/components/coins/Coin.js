@@ -1,12 +1,12 @@
 import React from 'react'
 
-const Coin = (props) => {
-    let { coin } = props
-    debugger
+const Coin = ({name, symbol, initial_value, marketcap}) => {
+    // let { coin } = props
+
     return (
         <div>
-            <h2>Name: {coin.name}</h2>
-            <p><bold>{coin.symbol}</bold> {coin.initial_value} {coin.marketcap}</p>
+            <h2>Name: {name}</h2>
+            <p><bold>{symbol}</bold> {initial_value} {marketcap}</p>
         </div>
     )
 }

@@ -34,9 +34,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/coins">
-              <Coins 
-              // coins={this.state.coin.coins} 
-              />
+              <Coins coins={this.props.coins.coins} />
           </Route> 
           <Route path="/wallet" component={withAuth(Wallet)} />
           <Route path="/learn-more" component={LearnMore} />

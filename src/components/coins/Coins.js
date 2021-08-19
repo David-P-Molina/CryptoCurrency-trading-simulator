@@ -6,7 +6,7 @@ function Coins(props) {
         return (
             <div>
                 <h1>Coins</h1>
-                {props.map((coin) =>  <Coin coin={coin} key={coin.id} name={coin.name} />)}
+                {props.coins.map((coin) =>  <Coin {...coin.attributes} key={coin.id} />)}
             </div>
         )
 

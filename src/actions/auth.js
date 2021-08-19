@@ -76,6 +76,7 @@ export const logoutUser = () => {
                 Authorization: getToken(),
             },
         }).then((res) => {
+            localStorage.removeItem("token")
             if (res.ok) {
                 return dispatch({ type: NOT_AUTHENTICATED })
             } else {
