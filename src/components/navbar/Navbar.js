@@ -20,8 +20,8 @@ const Navbar = ({ authChecked, loggedIn, currentUser }) => {
                     </>
                 ) : (
                     <>
-                        <NavLink to="/signup" className="nav-links" >Sign Up</NavLink>
-                        <NavLink to="/login" className="nav-links" >Login</NavLink>
+                        <NavLink to="/signup" className="nav-links user-functions" >Sign Up</NavLink>
+                        <NavLink to="/login" className="nav-links user-functions" >Login</NavLink>
                     </>
                 )}
                 </ul>

@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { logoutUser } from '../../actions/auth'
 import { useHistory } from 'react-router-dom'
+import '../navbar/Navbar.css'
 
 const Logout = ({ dispatchLogoutUser }) => {
     const history = useHistory()
@@ -11,7 +12,7 @@ const Logout = ({ dispatchLogoutUser }) => {
     }
 
     return (
-        <button className="btn" onClick={this.handleOnClick}>
+        <button className="nav-links user-functions" onClick={handleOnClick}>
             Logout
         </button>
     )
