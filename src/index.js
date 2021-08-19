@@ -1,14 +1,13 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import { applyMiddleware, createStore } from 'redux'
 import { Provider } from 'react-redux'
+import { applyMiddleware, createStore } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import thunk from 'redux-thunk'
 import { rootReducer } from './reducers/index'
+import thunk from 'redux-thunk'
+import reportWebVitals from './reportWebVitals';
+import './index.css';
 
 const store = createStore(
   rootReducer,
