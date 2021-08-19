@@ -7,7 +7,7 @@ class Signup extends Component {
         username: "",
         email: "",
         password: "",
-        errors: {status: {message: ""}}
+        errors: {status:{message: ""}}
     }
 
     handleOnChange = (e) => {
@@ -31,7 +31,7 @@ class Signup extends Component {
                 <form onSubmit={this.handleOnSubmit}>
                     <h1>Sign Up to Create Your Wallet</h1>
                     <br />
-                    <p className='h-8 text-red-400'>{this.state.errors.status.message}</p>
+                    {/* <p className='h-8 text-red-400'>{console.log(this.state.errors.status.message)}</p> */}
                 <label htmlFor="username">Username:</label>
                 <input 
                     type="text" 
