@@ -1,4 +1,5 @@
 import React from 'react'
+import { connect } from 'react-redux'
 import Navbar from './components/navbar/Navbar'
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
@@ -13,7 +14,7 @@ import withAuth from './components/auth/withAuth'
 import { fetchCoins } from './actions/coin'
 
 class App extends React.Component {
-  constructor(props) {
+  constructor(props) { //is this needed?
     super(props)
     this.state = {
       error: null,
@@ -45,4 +46,11 @@ class App extends React.Component {
   )};
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  return
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {}
+}
+export default connect(mapStateToProps, mapDispatchToProps)(App);
