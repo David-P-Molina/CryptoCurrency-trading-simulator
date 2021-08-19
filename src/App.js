@@ -12,7 +12,6 @@ import Login from './components/users/Login'
 import Logout from './components/users/Logout'
 import withAuth from './components/auth/withAuth'
 import { fetchCoins } from './actions/coin'
-
 class App extends React.Component {
   constructor(props) { //is this needed?
     super(props)
@@ -21,8 +20,9 @@ class App extends React.Component {
       coins: []
     }
   }
-
-    componentDidMount() {
+  
+  componentDidMount() {
+      this.props.fetchCoins()
       
     }
   render() {
