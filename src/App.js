@@ -10,15 +10,13 @@ import Signup from './components/users/Signup'
 import Login from './components/users/Login'
 import Logout from './components/users/Logout'
 import withAuth from './components/auth/withAuth'
-
+import { fetchCoins } from './actions/coin'
 
 class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
       error: null,
-      isLoaded: false,
-      isLoggedIn: false,
       coins: []
     }
   }
