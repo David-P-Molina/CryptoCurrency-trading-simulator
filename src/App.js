@@ -12,6 +12,7 @@ import Login from './components/users/Login'
 import Logout from './components/users/Logout'
 import withAuth from './components/auth/withAuth'
 import { fetchCoins } from './actions/coin'
+
 class App extends React.Component {
   constructor(props) { //is this needed?
     super(props)
@@ -23,7 +24,6 @@ class App extends React.Component {
   
   componentDidMount() {
       this.props.fetchCoins()
-      
     }
   render() {
   return (
@@ -33,7 +33,11 @@ class App extends React.Component {
         <div className="page-contents">
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/coins" component={Coins} />
+          <Route path="/coins">
+              <Coins 
+              // coins={this.state.coin.coins} 
+              />
+          </Route> 
           <Route path="/wallet" component={withAuth(Wallet)} />
           <Route path="/learn-more" component={LearnMore} />
           <Route path="/login" component={Login} />
@@ -47,10 +51,10 @@ class App extends React.Component {
 }
 
 const mapStateToProps = (state) => {
-  return
+  return {coins: state.coins}
 }
 
 const mapDispatchToProps = (dispatch) => {
-  return {}
+  return {fetchCoins: () => dispatch(fetchCoins())}
 }
 export default connect(mapStateToProps, mapDispatchToProps)(App);

@@ -1,4 +1,4 @@
-export const coinReducer = (state = [], action) => {
+export const coinReducer = (state = {coins: []}, action) => {
     switch(action.type) {
         case 'FETCH_INITIAL_COINS_INFO':
             return {
