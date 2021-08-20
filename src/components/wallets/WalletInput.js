@@ -25,12 +25,16 @@ class WalletInput extends Component {
                     <label>Wallet Nickname:</label>
                     <input
                         type="text"
+                        name="name"
+                        id="name"
                         value={this.state.name}
                         onChange={this.handleOnChange}
                         />
                     <label>Starting Amount</label>
                     <input
                         type="number"
+                        name="initial_value"
+                        id="initial_value"
                         value={this.state.initial_value}
                         onChange={this.handleOnChange}
                         />
