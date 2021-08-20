@@ -7,6 +7,7 @@ import Home from './components/Home'
 import LearnMore from './components/LearnMore'
 import Coins from './components/coins/Coins'
 import Wallet from './components/wallets/Wallet'
+import WalletInput from './components/wallets/WalletInput'
 import Signup from './components/users/Signup'
 import Login from './components/users/Login'
 import Logout from './components/users/Logout'
@@ -37,6 +38,7 @@ class App extends React.Component {
               <Coins coins={this.props.coins.coins} />
           </Route> 
           <Route path="/wallet" component={withAuth(Wallet)} />
+          <Route path="/create-wallet" component={WalletInput} />
           <Route path="/learn-more" component={LearnMore} />
           <Route path="/login" component={Login} />
           <Route path="/logout" component={Logout} />
