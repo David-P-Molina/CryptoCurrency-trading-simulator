@@ -5,19 +5,16 @@ import { connect } from 'react-redux'
 class WalletInput extends Component {
     state = {
         name: '',
-        amount: 10000
+        initial_value: 10000
     }
     handleOnChange = (e) => {
         this.setState({
-            [e.target.name]: event.target.value,
+            [e.target.name]: e.target.value,
         })
     }
     handleOnSubmit = (e) => {
         e.preventDefault()
-         //Finish add wallet information
-        this.setState({
-            name: ''
-        })
+        const { name, initial_value }
     }
 
     render() {
@@ -34,7 +31,7 @@ class WalletInput extends Component {
                     <label>Starting Amount</label>
                     <input
                         type="number"
-                        amount={this.state.amount}
+                        value={this.state.initial_value}
                         onChange={this.handleOnChange}
                         />
                     <input type="submit" />
