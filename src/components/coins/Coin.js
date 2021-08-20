@@ -1,11 +1,13 @@
 import React from 'react'
 
-const Coin = ({name, symbol, initial_value, marketcap}) => {
+const Coin = ({name, symbol, day, week,  initial_value, marketcap, volume_quantity, volume_price}) => {
 
     return (
         <div>
-            <h2>Name: {name}</h2>
-            <p><bold>{symbol}</bold> {initial_value} {marketcap}</p>
+            <h4>{name}</h4>
+            <p>{symbol} | Initial Value: {initial_value} | MarketCap: {marketcap}
+             | Day: {day} | Week: {week} |  </p>
+             <br />
         </div>
     )
 }
