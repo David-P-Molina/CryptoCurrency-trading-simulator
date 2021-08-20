@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+//import { createWallet } from '../../actions/wallet
 
 class WalletInput extends Component {
     state = {
@@ -42,5 +44,10 @@ class WalletInput extends Component {
         )
     }
 }
-
-export default WalletInput
+const mapStateToProps = () => {
+    return
+}
+const mapDispatchToProps = (dispatch) => {
+    return
+}
+export default connect()(WalletInput)
