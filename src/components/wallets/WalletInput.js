@@ -7,15 +7,14 @@ class WalletInput extends Component {
         name: '',
         amount: 10000
     }
-    handleOnChange = event => {
+    handleOnChange = (e) => {
         this.setState({
-            name: event.target.value,
-            value: event.target.value
+            [e.target.name]: event.target.value,
         })
     }
-    handleOnSubmit = event => {
-        event.preventDefault()
-        this.props.(this.state.name) //Finish add wallet information
+    handleOnSubmit = (e) => {
+        e.preventDefault()
+         //Finish add wallet information
         this.setState({
             name: ''
         })
