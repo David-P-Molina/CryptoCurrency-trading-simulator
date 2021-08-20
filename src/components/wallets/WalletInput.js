@@ -14,7 +14,8 @@ class WalletInput extends Component {
     }
     handleOnSubmit = (e) => {
         e.preventDefault()
-        const { name, initial_value }
+        const { name, initial_value } = this.state
+        this.props.dispatchCreateWallet({ name, initial_value })
     }
 
     render() {

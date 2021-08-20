@@ -4,7 +4,7 @@ import { loginUser } from '../../actions/auth'
 
 class Login extends Component {
     state = {
-        username: "",
+        email: "",
         password: "",
         error: false,
     }
@@ -15,9 +15,9 @@ class Login extends Component {
     }
     handleOnSubmit = (e) => {
         e.preventDefault()
-        const { username, password } = this.state
-        this.props.dispatchLoginUser({ username, password })
-        .then(() => this.props.history.push("/"))
+        const { email, password } = this.state
+        this.props.dispatchLoginUser({ email, password })
+        .then(() => this.props.history.push("/wallet"))
         .catch(() => this.setState({ error: true }))
     
     }
@@ -26,12 +26,12 @@ class Login extends Component {
             <div>
                 <form onSubmit={this.handleOnSubmit}>
                     <h1>Login</h1>
-                    <p className="errors"> {this.state.error && "Invalid username or password. Please try again."} </p>
-                    <label htmlFor="username">Username:</label>
+                    <p className="errors"> {this.state.error && "Invalid email or password. Please try again."} </p>
+                    <label htmlFor="email">Email:</label>
                     <input 
                         type="text"
-                        name="username"
-                        id="username"
+                        name="email"
+                        id="email"
                         onChange={this.handleOnChange}
                         value={this.state.username}
                     />
