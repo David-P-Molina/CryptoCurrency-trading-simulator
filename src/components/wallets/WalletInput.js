@@ -21,6 +21,7 @@ class WalletInput extends Component {
     render() {
         return (
             <div>
+                Welcome {this.props.currentUser}
                 <form onSubmit={this.handleOnSubmit}>
                     Create A New Wallet
                     <label>Wallet Nickname:</label>
