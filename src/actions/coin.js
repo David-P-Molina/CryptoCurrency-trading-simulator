@@ -9,7 +9,6 @@ export function fetchCoins() {
                 return res.json()
                 .then(coins => dispatch({ type: ADD_COINS, coins}))
             } else {
-                debugger
                 return res.json()
                     .catch((errors) => {
                     console.log(errors)
