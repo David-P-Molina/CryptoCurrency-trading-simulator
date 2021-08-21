@@ -1,7 +1,9 @@
-const walletReducer = (state = [], action) => {
+const walletReducer = (state = {wallet: [], loading: false, error: ""}, action) => {
     switch(action.type) {
-        case '':
-            return []
+        case ADD_TO_DATABASE:
+            return {...state, loading: action.payload}
+        case ERROR:
+            return {...state, error: action.payload}
         default:
             return state
     }
