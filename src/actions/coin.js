@@ -1,4 +1,4 @@
-import { FETCH_INITIAL_COINS_INFO, ADD_COINS } from "."
+import { FETCH_INITIAL_COINS_INFO, ADD_COINS, UPDATE_COIN_VALUES } from "."
 
 export function fetchCoins() {
     return (dispatch) => {
