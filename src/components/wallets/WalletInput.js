@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-//import { createWallet } from '../../actions/wallet
+import { createWallet } from '../../actions/wallet
 
 class WalletInput extends Component {
     state = {
@@ -50,6 +50,8 @@ const mapStateToProps = () => {
     return
 }
 const mapDispatchToProps = (dispatch) => {
-    return
+    return {
+        dispatchCreateWallet: (walletInfo) => dispatch(createWallet(walletInfo))
+    }
 }
-export default connect()(WalletInput)
+export default connect(null, mapDispatchToProps)(WalletInput)
