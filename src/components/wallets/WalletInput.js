@@ -5,7 +5,7 @@ import { createWallet } from '../../actions/wallet'
 class WalletInput extends Component {
     state = {
         name: '',
-        initialValue: 10000
+        initial_value: 10000
     }
     handleOnChange = (e) => {
         this.setState({
@@ -13,9 +13,10 @@ class WalletInput extends Component {
         })
     }
     handleOnSubmit = (e) => {
+        debugger
         e.preventDefault()
-        const { name, initialValue } = this.state
-        this.props.dispatchCreateWallet({ name, initialValue })
+        const { name, initial_value } = this.state
+        this.props.dispatchCreateWallet({ name, initial_value })
     }
 
     render() {
@@ -35,10 +36,10 @@ class WalletInput extends Component {
                     <label>Starting Amount</label>
                     <input
                         type="number"
-                        name="initialValue"
-                        id="initialValue"
+                        name="initial_value"
+                        id="initial_value"
                         onChange={this.handleOnChange}
-                        value={this.state.initialValue}
+                        value={this.state.initial_value}
                         />
                     <input type="submit" />
                 </form>

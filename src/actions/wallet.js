@@ -11,6 +11,7 @@ const getToken = () => {
 }
 export function createWallet(walletInfo) {
     return (dispatch) => {
+        debugger
         const configObj = {
             method: "POST",
             headers: {
