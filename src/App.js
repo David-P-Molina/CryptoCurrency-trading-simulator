@@ -38,7 +38,7 @@ class App extends React.Component {
               <Coins coins={this.props.coins.coins} />
           </Route> 
           <Route path="/wallet" component={withAuth(Wallet)} />
-          <Route path="/create-wallet" component={withAuth(WalletInput)} />
+          {/* <Route path="/create-wallet" component={withAuth(WalletInput)} /> */}
           <Route path="/learn-more" component={LearnMore} />
           <Route path="/login" component={Login} />
           <Route path="/logout" component={Logout} />
