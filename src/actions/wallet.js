@@ -1,4 +1,6 @@
 import { CREATE_WALLET } from "."
+import { ADD_TO_DATABASE } from "."
+
 const getToken = () => {
     const now = new Date(Date.now()).getTime();
     const timeAllowed = 1000 * 60 * 30;
@@ -17,7 +19,14 @@ export function createWallet(walletInfo) {
             },
             body: walletInfo
         }
-        dispatch({ type: CREATE_WALLET, payload: true })
-        fetch("http://localhost:3001/wallets"), 
+        dispatch({ type: ADD_TO_DATABASE, payload: true })
+        fetch("http://localhost:3001/wallets", configObj)
+        .then(res => {
+            if (res.ok) {
+                return res
+                .json()
+                .then(json => dispatch({ type: CREATE_WALLET, payload: json }))
+            } else {}
+        })
     }
 }
