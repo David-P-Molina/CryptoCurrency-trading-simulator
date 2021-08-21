@@ -15,16 +15,17 @@ export function createWallet(walletInfo) {
             method: "POST",
             headers: {
                 Accept: "application/json",
+                "Content-Type": "application/json",
                 Authorization: getToken()
             },
-            body: walletInfo
+            body: JSON.stringify({ wallet: walletInfo })
         }
         dispatch({ type: ADD_TO_DATABASE, payload: true })
         fetch("http://localhost:3001/wallets", configObj)
         .then(res => {
             if (res.ok) {
                 return res
-                .json()
+                .json() 
                 .then(json => dispatch({ type: CREATE_WALLET, payload: json }))
             } else {
                 return res

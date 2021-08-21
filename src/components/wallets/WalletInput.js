@@ -5,17 +5,17 @@ import { createWallet } from '../../actions/wallet'
 class WalletInput extends Component {
     state = {
         name: '',
-        initial_value: 10000
+        initialValue: 10000
     }
     handleOnChange = (e) => {
         this.setState({
-            [e.target.name]: e.target.value,
+            [e.target.name]: e.target.value
         })
     }
     handleOnSubmit = (e) => {
         e.preventDefault()
-        const { name, initial_value } = this.state
-        this.props.dispatchCreateWallet({ name, initial_value })
+        const { name, initialValue } = this.state
+        this.props.dispatchCreateWallet({ name, initialValue })
     }
 
     render() {
@@ -29,16 +29,16 @@ class WalletInput extends Component {
                         type="text"
                         name="name"
                         id="name"
-                        value={this.state.name}
                         onChange={this.handleOnChange}
+                        value={this.state.name}
                         />
                     <label>Starting Amount</label>
                     <input
                         type="number"
-                        name="initial_value"
-                        id="initial_value"
-                        value={this.state.initial_value}
+                        name="initialValue"
+                        id="initialValue"
                         onChange={this.handleOnChange}
+                        value={this.state.initialValue}
                         />
                     <input type="submit" />
                 </form>
@@ -47,7 +47,7 @@ class WalletInput extends Component {
     }
 }
 const mapStateToProps = ({ auth: { currentUser: { username } } }) => {
-    return username
+    return {username}
 }
 const mapDispatchToProps = (dispatch) => {
     return {

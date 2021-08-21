@@ -50,6 +50,7 @@ class Login extends Component {
                         value="Login"
                     />
                 </form>
+                <p>email: testing@gmail.com <br/> password: password</p>
             </div>
         )
     }
