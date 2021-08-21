@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 import authReducer from './authReducer'
-import { walletReducer } from './walletReducer'
-import { coinReducer } from './coinReducer'
+import  walletReducer  from './walletReducer'
+import  coinReducer  from './coinReducer'
 
 export const rootReducer = combineReducers({
     auth: authReducer,
