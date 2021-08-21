@@ -8,6 +8,8 @@ const walletReducer = (state = {wallet: [], loading: false, error: ""}, action) 
             return {...state, error: action.payload}
         case CREATE_WALLET:
             return {...state, wallet: action.payload}
+        case DELETE_WALLET:
+            return {...state, wallet: [], loading: false} 
         default:
             return state
     }
