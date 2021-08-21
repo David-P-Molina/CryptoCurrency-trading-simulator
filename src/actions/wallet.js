@@ -1,4 +1,4 @@
-import { CREATE_WALLET, ADD_TO_DATABASE, ERROR } from "."
+import { CREATE_WALLET, ADD_TO_DATABASE, ERROR, DELETE_WALLET } from "."
 
 
 const getToken = () => {
@@ -11,7 +11,6 @@ const getToken = () => {
 }
 export function createWallet(walletInfo) {
     return (dispatch) => {
-        debugger
         const configObj = {
             method: "POST",
             headers: {
@@ -38,5 +37,19 @@ export function createWallet(walletInfo) {
             }
         })
         .catch(errors => dispatch({ type: ERROR, payload: errors}))
+    }
+}
+
+export function deleteWallet() {
+    return (dispatch) => {
+        const configObj = {
+            method: "DELETE",
+            headers: {
+                Accept: "application/json",
+                "Content-Type": "application/json",
+                Authorization: getToken(),
+            }
+        }
+        return fetch("http://localhost:3001/wallet", configObj)
     }
 }
