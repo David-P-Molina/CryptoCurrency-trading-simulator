@@ -1,5 +1,5 @@
-import { CREATE_WALLET } from "."
-import { ADD_TO_DATABASE } from "."
+import { CREATE_WALLET, ADD_TO_DATABASE, ERROR } from "."
+
 
 const getToken = () => {
     const now = new Date(Date.now()).getTime();
@@ -26,7 +26,15 @@ export function createWallet(walletInfo) {
                 return res
                 .json()
                 .then(json => dispatch({ type: CREATE_WALLET, payload: json }))
-            } else {}
+            } else {
+                return res
+                .json()
+                .then((errors) => {
+                    dispatch({ type: ERROR, payload: errors })
+                    return Promise.reject(errors)
+                })
+            }
         })
+        .catch(errors => dispatch({ type: ERROR, payload: errors}))
     }
 }
