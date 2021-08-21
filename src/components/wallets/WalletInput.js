@@ -22,7 +22,7 @@ class WalletInput extends Component {
     render() {
         return (
             <div>
-                <h1>Welcome {this.props.currentUser.username}</h1>
+                <h1>Welcome {this.props.username}</h1>
                 <form onSubmit={this.handleOnSubmit}>
                     Create A New Wallet
                     <label>Wallet Nickname:</label>
