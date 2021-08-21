@@ -21,7 +21,7 @@ class WalletInput extends Component {
     render() {
         return (
             <div>
-                Welcome {this.props.currentUser}
+                <h1>Welcome {this.props.currentUser.username}</h1>
                 <form onSubmit={this.handleOnSubmit}>
                     Create A New Wallet
                     <label>Wallet Nickname:</label>
@@ -46,8 +46,8 @@ class WalletInput extends Component {
         )
     }
 }
-const mapStateToProps = ({ auth: { currentUser } }) => {
-    return currentUser
+const mapStateToProps = ({ auth: { currentUser: { username } } }) => {
+    return username
 }
 const mapDispatchToProps = (dispatch) => {
     return {
