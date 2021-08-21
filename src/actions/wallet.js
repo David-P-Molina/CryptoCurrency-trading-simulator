@@ -9,7 +9,7 @@ const getToken = () => {
 }
 export function createWallet(walletInfo) {
     return (dispatch) => {
-        return fetch("http://localhost:3001/wallets"), {
+        const configObj = {
             method: "POST",
             headers: {
                 Accept: "application/json",
@@ -17,5 +17,7 @@ export function createWallet(walletInfo) {
             },
             body: walletInfo
         }
+        dispatch({ type: CREATE_WALLET, payload: true })
+        fetch("http://localhost:3001/wallets"), 
     }
 }
