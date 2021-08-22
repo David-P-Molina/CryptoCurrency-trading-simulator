@@ -1,4 +1,4 @@
-import { CREATE_WALLET, DELETE_WALLET, SELL_COIN, BUY_COIN, ERROR, ADD_TO_DATABASE } from "../actions"
+import { CREATE_WALLET, HAS_WALLET, DELETE_WALLET, SELL_COIN, BUY_COIN, ERROR, ADD_TO_DATABASE } from "../actions"
 
 const walletReducer = (state = {wallet: [], loading: false, hasWallet: false, error: ""}, action) => {
     switch(action.type) {
@@ -7,9 +7,11 @@ const walletReducer = (state = {wallet: [], loading: false, hasWallet: false, er
         case ERROR:
             return {...state, error: action.payload}
         case CREATE_WALLET:
-            return {...state, wallet: action.payload, hasWallet: true}
+            return {...state, wallet: action.payload}
+        case HAS_WALLET:
+            return {...state, hasWallet: true}
         case DELETE_WALLET:
-            return {...state, wallet: [], loading: false, hasWallet: false} 
+            return {...state, wallet: [], loading: false} 
         default:
             return state
     }

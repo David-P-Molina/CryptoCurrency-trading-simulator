@@ -2,6 +2,7 @@
 export const AUTHENTICATED = 'AUTHENTICATED'
 export const NOT_AUTHENTICATED = 'NOT_AUTHENTICATED'
 //Wallet
+export const HAS_WALLET = 'HAS_WALLET'
 export const CREATE_WALLET = 'CREATE_WALLET'
 export const DELETE_WALLET = 'DELETE_WALLET'
 export const SELL_COIN = 'SELL_COIN'

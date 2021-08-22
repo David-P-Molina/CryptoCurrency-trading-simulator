@@ -1,4 +1,4 @@
-import { CREATE_WALLET, ADD_TO_DATABASE, ERROR, DELETE_WALLET } from "."
+import { CREATE_WALLET, ADD_TO_DATABASE, ERROR, HAS_WALLET, DELETE_WALLET } from "."
 
 
 const getToken = () => {
@@ -24,6 +24,7 @@ export function createWallet(walletInfo) {
         fetch("http://localhost:3001/wallets", configObj)
         .then(res => {
             if (res.ok) {
+                dispatch({ type: HAS_WALLET })
                 return res
                 .json() 
                 .then(json => dispatch({ type: CREATE_WALLET, payload: json }))
