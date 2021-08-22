@@ -17,5 +17,10 @@ const mapStateToProps = ({ auth: { currentUser } }) => {
     debugger
     return {currentUser}
 }
-
-export default connect(mapStateToProps)(Wallet)
+const mapDispatchToProps = (dispatch) => {
+    debugger
+    return {
+        dispatchHasWallet: (boolean) => dispatch(hasWallet(boolean))
+    }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Wallet)
