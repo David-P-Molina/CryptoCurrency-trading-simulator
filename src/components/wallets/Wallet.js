@@ -19,7 +19,6 @@ const mapStateToProps = ({ auth: { currentUser } }) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        dispatchHasWallet: (boolean) => dispatch(hasWallet(boolean))
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Wallet)
