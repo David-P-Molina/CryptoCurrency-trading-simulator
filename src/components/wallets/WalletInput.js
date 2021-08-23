@@ -52,7 +52,7 @@ const mapStateToProps = ({ auth: { currentUser: { username } } }) => {
 }
 const mapDispatchToProps = (dispatch) => {
     return {
-        dispatchCreateWallet: (walletInfo) => dispatch(createWallet(walletInfo))
+        dispatchCreateWallet: (walletInfo) => dispatch(createWallet(walletInfo)),
     }
 }
 export default connect(mapStateToProps, mapDispatchToProps)(WalletInput)

@@ -9,7 +9,7 @@ class Wallet extends Component {
         return (
             <div>
                 <h1>sdf</h1>
-                <WalletInput hasWallet={true} username={this.props.username}/>
+                <WalletInput username={this.props.username}/>
             </div>
         )
     }
