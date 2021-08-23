@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import WalletInput from './WalletInput'
+import { hasWallet } from '../../actions/wallet'
 
 class Wallet extends Component {
 
@@ -14,11 +15,9 @@ class Wallet extends Component {
     }
 }
 const mapStateToProps = ({ auth: { currentUser } }) => {
-    debugger
     return {currentUser}
 }
 const mapDispatchToProps = (dispatch) => {
-    debugger
     return {
         dispatchHasWallet: (boolean) => dispatch(hasWallet(boolean))
     }

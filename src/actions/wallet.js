@@ -9,6 +9,10 @@ const getToken = () => {
         return localStorage.getItem("token")
     }
 }
+export function hasWallet(boolean) {
+    return (dispatch) => {
+    }
+}
 export function createWallet(walletInfo) {
     return (dispatch) => {
         const configObj = {
